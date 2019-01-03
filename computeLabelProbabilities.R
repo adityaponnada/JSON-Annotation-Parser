@@ -115,6 +115,8 @@ labelProp$NonwrProp <- labelProp$Nonwear/labelProp$TotalProp
 labelProp$NoneProp <- labelProp$None/labelProp$TotalProp
 
 
+
+
 labelProp$MaxProp <- NA
 labelProp$FinalLabel <- NA
 
@@ -133,7 +135,14 @@ for (rowIndex in 1:nrow(labelProp)){
   #labelProp$MaxProp[rowIndex] <- which.max(L1)
   
   #labelProp$FinalLabel[rowIndex] <- lapply(L1, function(x) x[which.is.max(x)])
-  labelProp$FinalLabel[rowIndex] <- which.max(L1)
+  
+  if (labelProp$TotalProp[rowIndex] != 0.00){
+    
+    labelProp$FinalLabel[rowIndex] <- which.max(L1)
+    
+  }
+  
+ 
   
 }
 
@@ -155,6 +164,6 @@ labelProp$MostProbableLabel[labelProp$FinalLabel == 5] <- "None"
 
 
 
-savePath = "C:/Users/Dharam/Downloads/MDCAS Files/MDCAS_ALGO_RAW_VIZ/Turk_Sept10/Labels/LabelsProp.csv"
+savePath = "C:/Users/Dharam/Downloads/MDCAS Files/MDCAS_ALGO_RAW_VIZ/Turk_noTrial/LabelsProp.csv"
 write.csv(file = savePath, x = labelProp, quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 

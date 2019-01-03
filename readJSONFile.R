@@ -9,7 +9,7 @@ library(tidyverse)
 
 ##jsonFile <- read_json("C:/Users/Dharam/Downloads/MDCAS Files/LabelComputationFromJSON/labels.json", simplifyVector = TRUE)
 
-jsonFile2 <- fromJSON(file = "C:/Users/Dharam/Downloads/MDCAS Files/LabelComputationFromJSON/labels.json")
+jsonFile2 <- fromJSON(file = "C:/Users/Dharam/Downloads/MDCAS Files/MDCAS_ALGO_RAW_VIZ/Turk_Nov26/labels_Nov_26.json")
 
 #testFile <- fromJSON(jsonLink)
 

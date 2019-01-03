@@ -5,7 +5,7 @@ library(tidyjson)
 library(dplyr)
 
 
-formattedJSON = fromJSON(file = "C:/Users/Dharam/Downloads/MDCAS Files/MDCAS_ALGO_RAW_VIZ/Turk_Sept10/secondLabelDetails.json")
+formattedJSON = fromJSON(file = "C:/Users/Dharam/Downloads/MDCAS Files/MDCAS_ALGO_RAW_VIZ/Turk_noTrial/second_details.json")
 
 
 names(formattedJSON)
